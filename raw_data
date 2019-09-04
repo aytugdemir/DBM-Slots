@@ -1,0 +1,97 @@
+{
+  "name": "slot",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "aleHT",
+  "actions": [
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "var items = [':grapes:', ':lemon:', ':apple:'];\n\nvar birbir = items[Math.floor(Math.random() * items.length)];\nvar biriki = items[Math.floor(Math.random() * items.length)];\nvar biruc = items[Math.floor(Math.random() * items.length)];\n\nvar ikibir = items[Math.floor(Math.random() * items.length)];\nvar ikiiki = items[Math.floor(Math.random() * items.length)];\nvar ikiuc = items[Math.floor(Math.random() * items.length)];\n\nvar ucbir = items[Math.floor(Math.random() * items.length)];\nvar uciki = items[Math.floor(Math.random() * items.length)];\nvar ucuc = items[Math.floor(Math.random() * items.length)];\n\nwhile (birbir == biriki && birbir == biruc) {\n    var birbir = items[Math.floor(Math.random() * items.length)];\n    var biriki = items[Math.floor(Math.random() * items.length)];\n    var biruc = items[Math.floor(Math.random() * items.length)];\n}\n\nwhile (ucbir == uciki && ucbir == ucuc) {\n    var ucbir = items[Math.floor(Math.random() * items.length)];\n    var uciki = items[Math.floor(Math.random() * items.length)];\n    var ucuc = items[Math.floor(Math.random() * items.length)];\n}\n\nthis.storeValue(birbir, 1, \"birbir\", cache);\nthis.storeValue(biriki, 1, \"biriki\", cache);\nthis.storeValue(biruc, 1, \"biruc\", cache);\n\nthis.storeValue(ikibir, 1, \"ikibir\", cache);\nthis.storeValue(ikiiki, 1, \"ikiiki\", cache);\nthis.storeValue(ikiuc, 1, \"ikiuc\", cache);\n\nthis.storeValue(ucbir, 1, \"ucbir\", cache);\nthis.storeValue(uciki, 1, \"uciki\", cache);\nthis.storeValue(ucuc, 1, \"ucuc\", cache);",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "title": "",
+      "author": "",
+      "color": "#36393F",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "ikibir",
+      "comparison": "1",
+      "value": "tempVars(\"ikiiki\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "8",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "ikibir",
+      "comparison": "1",
+      "value": "tempVars(\"ikiuc\")",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "8",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "__**Tebrikler ${member}!**__\n\n${tempVars(\"birbir\")} **:** ${tempVars(\"biriki\")} **:** ${tempVars(\"biruc\")}\n${tempVars(\"ikibir\")} **:** ${tempVars(\"ikiiki\")} **:** ${tempVars(\"ikiuc\")} **<==**\n${tempVars(\"ucbir\")} **:** ${tempVars(\"uciki\")} **:** ${tempVars(\"ucuc\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "__**Malesef kaybettin ${member}.**__\n\n${tempVars(\"birbir\")} **:** ${tempVars(\"biriki\")} **:** ${tempVars(\"biruc\")}\n${tempVars(\"ikibir\")} **:** ${tempVars(\"ikiiki\")} **:** ${tempVars(\"ikiuc\")} **<==**\n${tempVars(\"ucbir\")} **:** ${tempVars(\"uciki\")} **:** ${tempVars(\"ucuc\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
